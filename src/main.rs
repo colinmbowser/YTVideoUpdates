@@ -68,13 +68,24 @@ fn get_playlist_videos(playlist_id: &String, api_key: &String) {
 
     //println!("channel info url: {}", playlist_url);
 
-    let playlist_json = get_playlist_json(&playlist_url);
+    let playlist_json = get_playlist_json(&playlist_url)
+        .expect("Failed to find upload playlist json.");
 
-    println!("{:#?}", playlist_json);
+    display_information(playlist_json);
+    // for i in 0..4 {
+    //     println!("Title: {}\nRelease Date: {}",
+    //     playlist_json.items[i].snippet.title,
+    //     playlist_json.items[i].snippet.published_at,);
+    // }
+    //println!("{:#?}", playlist_json);
 }
 
-fn display_information(playlist_json: String) {
-
+fn display_information(playlist_json: Playlist) {
+    for i in 0..4 {
+        println!("Title: {}\nRelease Date: {}\n",
+        playlist_json.items[i].snippet.title,
+        playlist_json.items[i].snippet.published_at,);
+    }
 }
 
 fn get_playlist_json(playlist_url: &String) -> Option<Playlist> {

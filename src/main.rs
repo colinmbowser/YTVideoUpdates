@@ -87,7 +87,7 @@ fn get_playlist_json(playlist_url: &String) -> Option<Playlist> {
 #[derive(Debug, Deserialize)]
 #[serde(rename_all = "camelCase")]
 struct Playlist {
-    next_page_token: String,
+    //next_page_token: String,
     items: Vec<Video>,
 }
 

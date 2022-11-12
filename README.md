@@ -1,30 +1,18 @@
 # Overview
 
-{Important!  Do not say in this section that this is college assignment.  Talk about what you are trying to accomplish as a software engineer to further your learning.}
-
-{Provide a description the software that you wrote to demonstrate the Rust language.}
-
-{Describe your purpose for writing this software.}
-
-{Provide a link to your YouTube demonstration.  It should be a 4-5 minute demo of the software running and a walkthrough of the code.  Focus should be on sharing what you learned about the language syntax.}
-
-[Software Demo Video](http://youtube.link.goes.here)
+This software uses an API to get a youtube channel and look at the last 5 videos uploaded and outputs the name of the video and when it was output. I wrote this code because I had never used an API before and it was a good way to learn how to use them, I still have many things to do with this code to make it better.
 
 # Development Environment
 
-{Describe the tools that you used to develop the software}
-
-{Describe the programming language that you used and any libraries.}
+I used serde, reqwest and dotenv in this program to read json outputs.
 
 # Useful Websites
 
-{Make a list of websites that you found helpful in this project}
-* [Web Site Name](http://url.link.goes.here)
-* [Web Site Name](http://url.link.goes.here)
+* [rust-lang.org](https://doc.rust-lang.org/std/result/enum.Result.html#method.ok)
+* [Stackoverflow](https://stackoverflow.com/questions/56279350/how-to-get-at-one-particular-item-in-json-file-using-serde-json-without-deriving)
 
 # Future Work
 
-{Make a list of things that you need to fix, improve, and add in the future.}
-* Item 1
-* Item 2
-* Item 3
+* Make the output cleaner so that it is easier to understand.
+* Add a file so that the requests that I have taken so far will save so I do not send 20 requests to get the same stuff each time.
+* Add a file to save channel names and channel codes for channels that I frequently look up.

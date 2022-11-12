@@ -72,12 +72,6 @@ fn get_playlist_videos(playlist_id: &String, api_key: &String) {
         .expect("Failed to find upload playlist json.");
 
     display_information(playlist_json);
-    // for i in 0..4 {
-    //     println!("Title: {}\nRelease Date: {}",
-    //     playlist_json.items[i].snippet.title,
-    //     playlist_json.items[i].snippet.published_at,);
-    // }
-    //println!("{:#?}", playlist_json);
 }
 
 fn display_information(playlist_json: Playlist) {
